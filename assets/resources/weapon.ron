@@ -1,0 +1,246 @@
+(
+	weapons:{
+		Pistol: (
+			name: "Enemy-Pistol",
+			clip_size: (
+				max: 8.0,
+				current: 0.0,
+			),
+			fire_rate: (
+				max: 0.25,
+				current: 0.0,
+			),		
+			reload_time: (
+				max: 0.5,
+				current: 0.25,
+			),
+			speed: 30.0,
+			damage: 1.0,
+			knockback_strength: 25.0,
+			knockback_duration: 5.0,
+			hitstun_duration: 8.0,
+			spread: 0.05,
+			shooting_pattern: [0.0],
+		),		
+		PlayerPistol: (
+			name: "Pistol",
+			clip_size: (
+				max: 0.0,
+				current: 0.0,
+			),
+			fire_rate: (
+				max: 0.3,
+				current: 0.0,
+			),		
+			reload_time: (
+				max: 15.0,
+				current: 0.0,
+			),
+			speed: 40.0,
+			damage: 1.0,
+			knockback_strength: 20.0,
+			knockback_duration: 6.0,
+			hitstun_duration: 8.0,
+			spread: 0.025,
+			shooting_pattern: [0.0],
+		),
+		Sniper: (
+			name: "Enemy-Sniper",
+			clip_size: (
+				max: 3.0,
+				current: 3.0,
+			),	
+			fire_rate: (
+				max: 0.8,
+				current: 0.8,
+			),		
+			reload_time: (
+				max: 3.0,
+				current: 1.5,
+			),
+			speed: 65.0,
+			damage: 1.0,
+			knockback_strength: 40.0,
+			knockback_duration: 8.0,
+			hitstun_duration: 12.0,
+			spread: 0.0,
+			shooting_pattern: [0.0],
+		),	
+		PlayerSniper: (
+			name: "Sniper",
+			clip_size: (
+				max: 3.0,
+				current: 3.0,
+			),	
+			fire_rate: (
+				max: 0.5,
+				current: 0.0,
+			),		
+			reload_time: (
+				max: 1.5,
+				current: 0.0,
+			),
+			speed: 95.0,
+			damage: 2.5,
+			knockback_strength: 60.0,
+			knockback_duration: 8.0,
+			hitstun_duration: 10.0,
+			spread: 0.0,
+			shooting_pattern: [0.0],
+		),
+		Shotgun: (
+			name: "Enemy-Shotgun",
+			clip_size: (
+				max: 4.0,
+				current: 4.0,
+			),
+			fire_rate: (
+				max: 1.0,
+				current: 0.0,
+			),		
+			reload_time: (
+				max: 2.5,
+				current: 1.25,
+			),
+			speed: 20.0,
+			damage: 1.0,
+			knockback_strength: 50.0,
+			knockback_duration: 8.0,
+			hitstun_duration: 11.0,
+			spread: 0.0,
+			shooting_pattern: [0.0, 0.25, -0.25, 0.5, -0.5, 0.75, -0.75],
+		),		
+		PlayerShotgun: (
+			name: "Shotgun",
+			clip_size: (
+				max: 5.0,
+				current: 5.0,
+			),
+			fire_rate: (
+				max: 0.2,
+				current: 0.0,
+			),		
+			reload_time: (
+				max: 2.0,
+				current: 0.0,
+			),
+			speed: 25.0,
+			damage: 0.25,
+			knockback_strength: 40.0,
+			knockback_duration: 6.0,
+			hitstun_duration: 8.0,
+			spread: 0.05,
+			shooting_pattern: [0.0, 0.05, -0.05, 0.1, -0.1],
+		),
+		MachineGun: (
+			name: "Enemy-MachineGun",
+			clip_size: (
+				max: 20.0,
+				current: 20.0,
+			),
+			fire_rate: (
+				max: 0.08,
+				current: 0.0,
+			),		
+			reload_time: (
+				max: 1.0,
+				current: 0.5,
+			),
+			speed: 20.0,
+			damage: 1.0,
+			knockback_strength: 15.0,
+			knockback_duration: 5.0,
+			hitstun_duration: 8.0,
+			spread: 0.25,
+			shooting_pattern: [0.0],
+		),
+		PlayerMachineGun: (
+			name: "Machine-Gun",
+			clip_size: (
+				max: 20.0,
+				current: 22.0,
+			),
+			fire_rate: (
+				max: 0.05,
+				current: 0.0,
+			),		
+			reload_time: (
+				max: 1.5,
+				current: 0.0,
+			),
+			speed: 40.0,
+			damage: 0.5,
+			knockback_strength: 15.0,
+			knockback_duration: 5.0,
+			hitstun_duration: 5.0,
+			spread: 0.15,
+			shooting_pattern: [0.0],
+		),		
+		SplitShot: (
+			name: "Enemy-SplitShot",
+			clip_size: (
+				max: 4.0,
+				current: 4.0,
+			),
+			fire_rate: (
+				max: 0.3,
+				current: 0.3,
+			),		
+			reload_time: (
+				max: 1.0,
+				current: 0.5,
+			),
+			speed: 25.0,
+			damage: 1.0,
+			knockback_strength: 7.0,
+			knockback_duration: 4.0,
+			hitstun_duration: 6.0,
+			spread: 0.0,
+			shooting_pattern: [0.2, -0.2],
+		),		
+		CrossGun: (
+			name: "Enemy-CrossGun",
+			clip_size: (
+				max: 8.0,
+				current: 8.0,
+			),
+			fire_rate: (
+				max: 0.2,
+				current: 0.3,
+			),		
+			reload_time: (
+				max: 3.0,
+				current: 1.5,
+			),
+			speed: 20.0,
+			damage: 1.0,
+			knockback_strength: 7.0,
+			knockback_duration: 4.0,
+			hitstun_duration: 6.0,
+			spread: 0.0,
+			shooting_pattern: [0.0, 1.57775, -1.57775, 3.1415],
+		),		
+		CircleGun: (
+			name: "Enemy-CircleGun",
+			clip_size: (
+				max: 4.0,
+				current: 4.0,
+			),
+			fire_rate: (
+				max: 0.4,
+				current: 0.4,
+			),		
+			reload_time: (
+				max: 5.0,
+				current: 2.5,
+			),
+			speed: 15.0,
+			damage: 1.0,
+			knockback_strength: 7.0,
+			knockback_duration: 4.0,
+			hitstun_duration: 6.0,
+			spread: 0.0025,
+			shooting_pattern: [0.0, 0.628, -0.628, 1.256, -1.256, 1.885, -1.884, 2.513, -2.513, 3.1415],
+		),
+	}
+)

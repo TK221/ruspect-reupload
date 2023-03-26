@@ -1,0 +1,290 @@
+(
+	enemys:{
+		BigBlob : (
+			data: (
+				speed: 8.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.0,
+					blue: 0.0,
+					alpha: 1.0,
+				),
+				points: 60,
+				scale: (25.0, 25.0, 0.0),
+				damage: 1.0,
+				weight: 5.0,
+				behavior: [MoveToPlayer(0.0)],
+				weapon: [],
+				is_boss: false,
+			),
+			health: (
+				health: 10.0,
+				max_health: 10.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero,SpawnNewMob(MediumBlob)],
+				despawn: false,
+			),
+		),	
+		MediumBlob : (
+			data: (
+				speed: 12.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.0,
+					blue: 0.0,
+					alpha: 1.0,
+				),
+				points: 40,
+				scale: (20.0, 20.0, 0.0),
+				damage: 1.0,
+				weight: 1.0,
+				behavior: [MoveToPlayer(0.0)],
+				weapon: [],
+				is_boss: false,
+			),
+			health: (
+				health: 5.0,
+				max_health: 5.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero,SpawnNewMob(SmallBlob)],
+				despawn: false,
+			),
+		),	
+		SmallBlob : (
+			data: (
+				speed: 18.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.0,
+					blue: 0.0,
+					alpha: 1.0,
+				),
+				points: 20,
+				scale: (15.0, 15.0, 0.0),
+				damage: 1.0,
+				weight: 0.2,
+				behavior: [MoveToPlayer(0.0)],
+				weapon: [],
+				is_boss: false,
+			),
+			health: (
+				health: 2.0,
+				max_health: 2.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero],
+				despawn: false,
+			),
+		),		
+		PistolEnemy : (
+			data: (
+				speed: 4.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.2,
+					blue: 0.4,
+					alpha: 1.0,
+				),
+				points: 100,
+				scale: (25.0, 25.0, 0.0),
+				damage: 1.0,
+				weight: 1.0,
+				behavior: [MoveToPlayer(150.0), ShootAtPlayer],
+				weapon: [Pistol],
+				is_boss: false,
+			),
+			health: (
+				health: 6.0,
+				max_health: 6.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero],
+				despawn: false,
+			),
+		),
+		SplitShotEnemy : (
+			data: (
+				speed: 3.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.0,
+					blue: 0.4,
+					alpha: 1.0,
+				),
+				points: 120,
+				scale: (25.0, 25.0, 0.0),
+				damage: 0.0,
+				weight: 0.8,
+				behavior: [MoveToPlayer(150.0), ShootAtPlayer],
+				weapon: [SplitShot],
+				is_boss: false,
+			),
+			health: (
+				health: 6.0,
+				max_health: 6.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero],
+				despawn: false,
+			),
+		),	
+		MachineGunEnemy : (
+			data: (
+				speed: 6.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.6,
+					blue: 0.0,
+					alpha: 1.0,
+				),
+				points: 120,
+				scale: (25.0, 25.0, 0.0),
+				damage: 1.0,
+				weight: 1.5,
+				behavior: [MoveToPlayer(150.0), ShootAtPlayer],
+				weapon: [MachineGun],
+				is_boss: false,
+			),
+			health: (
+				health: 8.0,
+				max_health: 8.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero],
+				despawn: false,
+			),
+		),	
+		ShotgunEnemy : (
+			data: (
+				speed: 4.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.4,
+					blue: 0.2,
+					alpha: 1.0,
+				),
+				points: 150,
+				scale: (25.0, 25.0, 0.0),
+				damage: 0.0,
+				weight: 2.0,
+				behavior: [MoveToPlayer(50.0), ShootAtPlayer],
+				weapon: [Shotgun],
+				is_boss: false,
+			),
+			health: (
+				health: 10.0,
+				max_health: 10.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero],
+				despawn: false,
+			),
+		),		
+		SniperEnemy : (
+			data: (
+				speed: 1.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.0,
+					blue: 0.6,
+					alpha: 1.0,
+				),
+				points: 150,
+				scale: (25.0, 25.0, 0.0),
+				damage: 1.0,
+				weight: 1.0,
+				behavior: [MoveToPlayer(350.0), ShootAtPlayer],
+				weapon: [Sniper],
+				is_boss: false,
+			),
+			health: (
+				health: 12.0,
+				max_health: 12.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero],
+				despawn: false,
+			),
+		),
+		CrossEnemy : (
+			data: (
+				speed: 3.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.4,
+					blue: 0.0,
+					alpha: 1.0,
+				),
+				points: 180,
+				scale: (25.0, 25.0, 0.0),
+				damage: 1.0,
+				weight: 3.0,
+				behavior: [MoveToPlayer(150.0), ShootAtPlayer],
+				weapon: [CrossGun],
+				is_boss: false,
+			),
+			health: (
+				health: 12.0,
+				max_health: 12.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero],
+				despawn: false,
+			),
+		),		
+		CircleEnemy : (
+			data: (
+				speed: 4.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.2,
+					blue: 0.2,
+					alpha: 1.0,
+				),
+				points: 200,
+				scale: (25.0, 25.0, 0.0),
+				damage: 1.0,
+				weight: 1.0,
+				behavior: [MoveToPlayer(300.0), ShootAtPlayer],
+				weapon: [CircleGun],
+				is_boss: false,
+			),
+			health: (
+				health: 14.0,
+				max_health: 14.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero],
+				despawn: false,
+			),
+		),
+		Boss : (
+			data: (
+				speed: 2.0,
+				color: Rgba (
+					red: 1.0,
+					green: 0.0,
+					blue: 0.0,
+					alpha: 1.0,
+				),
+				points: 1000,
+				scale: (50.0, 50.0, 0.0),
+				damage: 1.0,
+				weight: 0.0,
+				behavior: [MoveToPlayer(350.0), ShootAtPlayer],
+				weapon: [MachineGun, Sniper, CircleGun, MachineGun],
+				is_boss: true,
+			),
+			health: (
+				health: 50.0,
+				max_health: 50.0,
+			),
+			behavior:(
+				on_despawn: [DieAtZero, EndGame],
+				despawn: false,
+			),
+		),
+	}
+)
